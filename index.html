@@ -1,216 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sitio web corporativo responsivo con secciones de empresa, registro, ubicación, tienda y menús saludables."
-    />
-    <title>CorpFit | Bienestar y Rendimiento</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="navbar container" aria-label="Navegación principal">
-        <a class="brand" href="#home" aria-label="Ir a inicio">
-          <span class="brand-mark">CF</span>
-          <span class="brand-name">CorpFit</span>
-        </a>
-
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
-
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about" data-i18n="nav.about">Quiénes Somos</a></li>
-          <li><a href="#register" data-i18n="nav.register">Ingreso</a></li>
-          <li><a href="#location" data-i18n="nav.location">Ubicación</a></li>
-          <li><a href="#shop" data-i18n="nav.shop">Tienda</a></li>
-          <li><a href="#menus" data-i18n="nav.menus">Menús</a></li>
-          <li><a class="btn btn-small" href="#home" data-i18n="nav.homeBtn">Volver al Inicio</a></li>
-        </ul>
-
-        <div class="lang-switch" aria-label="Selector de idioma">
-          <button class="lang-btn active" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <section id="home" class="section hero">
-        <div class="container hero-content">
-          <div class="hero-logo" aria-hidden="true">CF</div>
-          <h1 data-i18n="home.title">Bienvenido a CorpFit</h1>
-          <p data-i18n="home.text">
-            Transformamos bienestar en resultados con soluciones integrales de salud, nutrición y rendimiento corporativo.
-          </p>
-          <a href="#about" class="btn" data-i18n="home.cta">Conócenos</a>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <h2 data-i18n="about.title">Quiénes Somos</h2>
-          <div class="about-grid">
-            <article class="card">
-              <h3 data-i18n="about.historyTitle">Nuestra Historia</h3>
-              <p data-i18n="about.historyText">
-                Nacimos para ayudar a empresas y personas a mejorar su calidad de vida mediante hábitos sostenibles.
-              </p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="about.missionTitle">Misión</h3>
-              <p data-i18n="about.missionText">
-                Impulsar el bienestar físico y mental con servicios personalizados, tecnología y acompañamiento profesional.
-              </p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="about.whoTitle">Quiénes Somos</h3>
-              <p data-i18n="about.whoText">
-                Somos un equipo multidisciplinar de entrenadores, nutricionistas y especialistas en experiencia de cliente.
-              </p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="about.doTitle">A Qué Nos Dedicamos</h3>
-              <p data-i18n="about.doText">
-                Diseñamos programas corporativos, menús saludables, asesorías y experiencias que potencian productividad.
-              </p>
-            </article>
-          </div>
-          <footer class="section-footer">
-            <h3 data-i18n="contact.title">Contáctanos</h3>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
-              <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-          </footer>
-        </div>
-      </section>
-
-      <section id="register" class="section alt-bg">
-        <div class="container">
-          <h2 data-i18n="register.title">Formulario de Ingreso</h2>
-          <form class="form card" id="entryForm" novalidate>
-            <label for="fullName" data-i18n="register.name">Nombre y Apellidos</label>
-            <input id="fullName" name="fullName" type="text" required />
-
-            <label for="email" data-i18n="register.email">Correo Electrónico</label>
-            <input id="email" name="email" type="email" required />
-
-            <label for="phone" data-i18n="register.phone">Número de Teléfono</label>
-            <input id="phone" name="phone" type="tel" required />
-
-            <button type="submit" class="btn" data-i18n="register.submit">Registrarme</button>
-            <p class="form-message" id="formMessage" aria-live="polite"></p>
-          </form>
-          <footer class="section-footer">
-            <h3 data-i18n="contact.title">Contáctanos</h3>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
-              <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-          </footer>
-        </div>
-      </section>
-
-      <section id="location" class="section">
-        <div class="container">
-          <h2 data-i18n="location.title">Ubicación e Instalaciones</h2>
-          <div class="location-grid">
-            <div class="map-wrapper card">
-              <iframe
-                title="Ubicación de la empresa"
-                src="https://www.google.com/maps?q=40.4168,-3.7038&z=12&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <div class="gallery-grid">
-              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gimnasio moderno" />
-              <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80" alt="Sala de entrenamiento" />
-              <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80" alt="Zona de yoga" />
-              <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Instalaciones premium" />
-            </div>
-          </div>
-          <footer class="section-footer">
-            <h3 data-i18n="contact.title">Contáctanos</h3>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
-              <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-          </footer>
-        </div>
-      </section>
-
-      <section id="shop" class="section alt-bg">
-        <div class="container">
-          <h2 data-i18n="shop.title">Tienda de Merchandising</h2>
-          <div class="product-grid">
-            <article class="product-card card">
-              <img src="https://images.unsplash.com/photo-1503341733017-1901578f9f1e?auto=format&fit=crop&w=700&q=80" alt="Camiseta deportiva" />
-              <h3 data-i18n="shop.p1">Camiseta Performance</h3>
-              <p class="price">$24.90</p>
-              <button class="btn" data-i18n="shop.buy">Añadir al carrito</button>
-            </article>
-            <article class="product-card card">
-              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Sudadera" />
-              <h3 data-i18n="shop.p2">Sudadera CorpFit</h3>
-              <p class="price">$44.90</p>
-              <button class="btn" data-i18n="shop.buy">Añadir al carrito</button>
-            </article>
-            <article class="product-card card">
-              <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=700&q=80" alt="Botella térmica" />
-              <h3 data-i18n="shop.p3">Botella Térmica</h3>
-              <p class="price">$19.90</p>
-              <button class="btn" data-i18n="shop.buy">Añadir al carrito</button>
-            </article>
-          </div>
-          <footer class="section-footer">
-            <h3 data-i18n="contact.title">Contáctanos</h3>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
-              <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-          </footer>
-        </div>
-      </section>
-
-      <section id="menus" class="section">
-        <div class="container">
-          <h2 data-i18n="menus.title">Menús Equilibrados</h2>
-          <div class="tabs" role="tablist" aria-label="Menús diarios">
-            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="breakfast" data-i18n="menus.breakfast">Desayuno</button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="lunch" data-i18n="menus.lunch">Almuerzo</button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="dinner" data-i18n="menus.dinner">Cena</button>
-          </div>
-
-          <div class="tab-panel active" id="breakfast" role="tabpanel">
-            <div class="menu-card card"><h3 data-i18n="menus.b1t">Energía Matinal</h3><p data-i18n="menus.b1">Avena con frutas, yogur natural y semillas de chía.</p></div>
-          </div>
-          <div class="tab-panel" id="lunch" role="tabpanel">
-            <div class="menu-card card"><h3 data-i18n="menus.l1t">Balance Total</h3><p data-i18n="menus.l1">Pechuga a la plancha, quinoa y ensalada mediterránea.</p></div>
-          </div>
-          <div class="tab-panel" id="dinner" role="tabpanel">
-            <div class="menu-card card"><h3 data-i18n="menus.d1t">Ligero y Nutritivo</h3><p data-i18n="menus.d1">Salmón al horno, verduras al vapor y crema de calabaza.</p></div>
-          </div>
-
-          <footer class="section-footer">
-            <h3 data-i18n="contact.title">Contáctanos</h3>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
-              <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </div>
-          </footer>
-        </div>
-      </section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mazcufit | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="index.html"><span class="brand-mark">MZ</span><span class="brand-name">Mazcufit</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-page="home" data-i18n="nav.home">Inicio</a></li><li><a href="nosotros.html" data-page="about" data-i18n="nav.about">Quiénes Somos</a></li><li><a href="registro.html" data-page="register" data-i18n="nav.register">Ingreso</a></li><li><a href="ubicacion.html" data-page="location" data-i18n="nav.location">Ubicación</a></li><li><a href="tienda.html" data-page="shop" data-i18n="nav.shop">Tienda</a></li><li><a href="menus.html" data-page="menus" data-i18n="nav.menus">Menús</a></li><li><a class="btn" href="index.html" data-i18n="nav.homeBtn">Volver al Inicio</a></li>
+      </ul>
+      <div class="lang-switch"><button class="lang-btn active" data-lang="es">ES</button><button class="lang-btn" data-lang="en">EN</button></div>
+    </nav>
+  </header>
+  <main>
+    <section class="section hero">
+      <div class="container">
+        <div class="hero-logo" aria-hidden="true">MZ</div>
+        <h1>Mazcufit</h1>
+        <p class="lead">Entrenamiento, nutrición y bienestar premium para personas y equipos que quieren rendir al máximo.</p>
+        <a href="nosotros.html" class="btn">Conócenos</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div><h3 data-i18n="footer.title">Contáctanos</h3><p data-i18n="footer.copy">Mazcufit · Rendimiento y bienestar corporativo</p></div><div class="contact-actions"><a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a><a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div></footer>
+  <script src="script.js"></script>
+</body>
 </html>
