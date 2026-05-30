@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Menús equilibrados del día para miembros de Mazcufit." />
+    <title>Mazcufit | Menús Equilibrados del Día</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="menus">
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="Logo Mazcufit" class="logo-mazcufit" />
+          <span class="brand-name">Mazcufit</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" data-page="home" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="nosotros.html" data-page="about" data-i18n="nav.about">Quiénes Somos</a></li>
+          <li><a href="registro.html" data-page="register" data-i18n="nav.register">Ingreso</a></li>
+          <li><a href="ubicacion.html" data-page="location" data-i18n="nav.location">Ubicación</a></li>
+          <li><a href="tienda.html" data-page="shop" data-i18n="nav.shop">Tienda</a></li>
+          <li><a href="menus.html" data-page="menus" data-i18n="nav.menus">Menús</a></li>
+          <li><a class="btn" href="index.html" data-i18n="nav.homeBtn">Volver al Home</a></li>
+        </ul>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container centered">
+          <p class="section-kicker">Nutrición</p>
+          <h1 class="page-title">Menús Equilibrados del Día</h1>
+          <p class="lead">Opciones visuales organizadas para energía, rendimiento y recuperación durante toda la jornada.</p>
+          <div class="tabs" role="tablist" aria-label="Menús diarios">
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="breakfast">Desayuno</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="lunch">Almuerzo</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="dinner">Cena</button>
+          </div>
+          <div class="tab-panel active" id="breakfast" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Power Oats</h3><p>Avena, yogur griego, frutos rojos y semillas de chía.</p></article>
+              <article class="menu-card"><h3>Tostada Proteica</h3><p>Pan integral, huevo, aguacate y tomate natural.</p></article>
+              <article class="menu-card"><h3>Batido Mazcufit</h3><p>Plátano, proteína, leche vegetal y crema de cacahuete.</p></article>
+            </div>
+          </div>
+          <div class="tab-panel" id="lunch" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Pollo & Quinoa</h3><p>Pechuga a la plancha, quinoa, verduras y aceite de oliva.</p></article>
+              <article class="menu-card"><h3>Bowl Fitness</h3><p>Arroz integral, legumbres, verduras y salsa ligera.</p></article>
+              <article class="menu-card"><h3>Pasta Activa</h3><p>Pasta integral, atún, espinacas y tomate especiado.</p></article>
+            </div>
+          </div>
+          <div class="tab-panel" id="dinner" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Salmón Recovery</h3><p>Salmón al horno, brócoli y crema de calabaza.</p></article>
+              <article class="menu-card"><h3>Tortilla Verde</h3><p>Huevos, espinacas, champiñones y ensalada fresca.</p></article>
+              <article class="menu-card"><h3>Tofu Ligero</h3><p>Tofu marcado, verduras al vapor y arroz basmati.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <h3 data-i18n="footer.title">Contáctanos</h3>
+          <p data-i18n="footer.copy">Mazcufit · Gimnasio, nutrición y rendimiento</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
+          <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
