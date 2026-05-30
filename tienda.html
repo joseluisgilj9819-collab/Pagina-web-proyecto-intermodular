@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tienda de merchandising oficial de Mazcufit." />
+    <title>Mazcufit | Tienda de Merchandising</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="shop">
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="Logo Mazcufit" class="logo-mazcufit" />
+          <span class="brand-name">Mazcufit</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" data-page="home" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="nosotros.html" data-page="about" data-i18n="nav.about">Quiénes Somos</a></li>
+          <li><a href="registro.html" data-page="register" data-i18n="nav.register">Ingreso</a></li>
+          <li><a href="ubicacion.html" data-page="location" data-i18n="nav.location">Ubicación</a></li>
+          <li><a href="tienda.html" data-page="shop" data-i18n="nav.shop">Tienda</a></li>
+          <li><a href="menus.html" data-page="menus" data-i18n="nav.menus">Menús</a></li>
+          <li><a class="btn" href="index.html" data-i18n="nav.homeBtn">Volver al Home</a></li>
+        </ul>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container centered">
+          <p class="section-kicker">Merchandising oficial</p>
+          <h1 class="page-title">Tienda Mazcufit</h1>
+          <p class="lead">Prendas y accesorios con estética deportiva para representar la energía Mazcufit dentro y fuera del gimnasio.</p>
+          <div class="grid-3">
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1503341733017-1901578f9f1e?auto=format&fit=crop&w=700&q=80" alt="Camiseta deportiva Mazcufit" />
+              <h3>Camiseta Mazcufit Pro</h3>
+              <p class="price">$24.90</p>
+              <button class="btn">Comprar ahora</button>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Sudadera Mazcufit" />
+              <h3>Sudadera Mazcufit Elite</h3>
+              <p class="price">$44.90</p>
+              <button class="btn">Comprar ahora</button>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=700&q=80" alt="Botella térmica Mazcufit" />
+              <h3>Botella Mazcufit Force</h3>
+              <p class="price">$19.90</p>
+              <button class="btn">Comprar ahora</button>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <h3 data-i18n="footer.title">Contáctanos</h3>
+          <p data-i18n="footer.copy">Mazcufit · Gimnasio, nutrición y rendimiento</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:mazcuffit@gmail.com">Gmail</a>
+          <a class="btn btn-outline" href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
